@@ -27,7 +27,7 @@
   "devDependencies": {
     "mocha": "*",
     "mongoose": "*",
-    "expect.js"
+    "expect.js": "*"
   },
   "licenses": [
     {
