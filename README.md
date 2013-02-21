@@ -15,17 +15,23 @@ npm install mongoose-allocate
 
 ```javascript
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var allocatePlugin = require('mongoose-allocate');
 
 ...
 
-var SampleSchema = new Schema({
+// This is a capped collection
+var MySchema = new Schema({
   ...
 }, { capped: { size: 1000, max: 5, autoIndexId: true } }));
 
-SampleSchema.plugin(allocatePlugin, {len: 512, char: 'x'});
+...
 
-var SampleModel = db.model("SampleModel", SampleSchema);
+MySchema.plugin(allocatePlugin, {len: 512, char: 'x'});
+
+...
+
+var MyModel = db.model('MyModel', MySchema);
 ```
 
 ## Options
@@ -44,15 +50,11 @@ var SampleModel = db.model("SampleModel", SampleSchema);
 
 ## Test
 
-    // Default options
-    mocha
+    // Run
+    $ mocha
 
 [Mocha][] is needed for runing the test
 
-
-## Bugs and pull requests
-
-Please use the github [repository][] to notify bugs and make pull requests.
 
 ## License
 
