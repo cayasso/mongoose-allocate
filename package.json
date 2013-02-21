@@ -1,0 +1,38 @@
+{
+  "name": "mongoose-allocate",
+  "description": "Plugin for adding padding to Mongoose fields, good for capped collections.",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "keywords": [
+    "mongoose",
+    "capped collections",
+    "plugin"
+  ],
+  "author": {
+    "name": "Jonathan Brumley",
+    "email": "cayasso@gmail.com"
+  },
+  "homepage": "https://github.com/cayasso/mongoose-allocate",
+  "main": "./index",
+  "scripts": { 
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cayasso/mongoose-allocate.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "mongoose": "*",
+    "expect.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+}
