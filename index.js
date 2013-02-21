@@ -1,1 +1,1 @@
-module.exports = require('./lib/padding');
+module.exports = require('./lib/allocate');
