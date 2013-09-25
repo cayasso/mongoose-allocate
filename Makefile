@@ -1,4 +1,8 @@
-TESTS = $(shell find test -name "test.js")
+REPORTER = spec
 
 test:
-	mocha $(TESTS) -R spec
+	@./node_modules/.bin/mocha \
+		--reporter $(REPORTER) \
+		--bail
+
+.PHONY: test

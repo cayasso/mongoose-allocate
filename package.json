@@ -8,6 +8,13 @@
   "keywords": [
     "mongoose",
     "capped collections",
+    "padding",
+    "cache",
+    "data",
+    "mongo",
+    "memory",
+    "store",
+    "allocate",
     "plugin"
   ],
   "author": {
@@ -15,7 +22,7 @@
     "email": "cayasso@gmail.com"
   },
   "homepage": "https://github.com/cayasso/mongoose-allocate",
-  "main": "./index",
+  "main": "index.js",
   "scripts": { 
     "test": "make test"
   },

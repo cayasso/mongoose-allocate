@@ -1,4 +1,7 @@
-## About mongoose-allocate
+# mongoose allocate
+
+[![Build Status](https://travis-ci.org/cayasso/mongoose-allocate.png?branch=master)](https://travis-ci.org/cayasso/mongoose-allocate)
+[![NPM version](https://badge.fury.io/js/mongoose-allocate.png)](http://badge.fury.io/js/mongoose-allocate)
 
 Plugin for add padding to [mongoose][] documents, main use case is for capped collections.
 
