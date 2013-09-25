@@ -2,8 +2,6 @@ var mongooseAllocate = require('../');
 var mongoose = require('mongoose');
 var expect = require('expect.js');
 var Schema = mongoose.Schema;
-var Model;
-var schema;
 var db;
 
 describe('mongoose-allocate', function () {
@@ -27,13 +25,13 @@ describe('mongoose-allocate', function () {
   });
 
   it ('should fail without the plugin applied', function (done) {
-    schema = new Schema({
+    var schema = new Schema({
       title1: String,
       title2: String,
       title3: String
     }, { capped: { size: 1000, max: 5, autoIndexId: true } });
     
-    Model = mongoose.model('M1', schema);
+    var Model = mongoose.model('M1', schema);
 
     Model.create({
       title1: 'T'
@@ -49,7 +47,7 @@ describe('mongoose-allocate', function () {
   });
 
   it ('should not fail with the plugin applied', function (done) {
-    schema = new Schema({
+    var schema = new Schema({
       title1: String,
       title2: String,
       title3: String
@@ -58,7 +56,7 @@ describe('mongoose-allocate', function () {
     // Applying plugin
     schema.plugin(mongooseAllocate);
   
-    Model = mongoose.model('M2', schema);
+    var Model = mongoose.model('M2', schema);
 
     Model.create({
       title1: 'T'
@@ -76,7 +74,7 @@ describe('mongoose-allocate', function () {
   });
 
   it ('should allow getting plugin settings', function (done) {
-    schema = new Schema({
+    var schema = new Schema({
       title1: String,
       title2: String,
       title3: String
@@ -85,7 +83,7 @@ describe('mongoose-allocate', function () {
     // Applying plugin
     schema.plugin(mongooseAllocate, { fieldName: 'padding', len: 100, char: 'x'});
 
-    Model = mongoose.model('M3', schema);
+    var Model = mongoose.model('M3', schema);
 
     Model.create({
       title1: 'T'
@@ -97,7 +95,7 @@ describe('mongoose-allocate', function () {
   });
 
   it ('should use default settings if no options are passed', function (done) {
-    schema = new Schema({
+    var schema = new Schema({
       title1: String,
       title2: String,
       title3: String
@@ -106,7 +104,7 @@ describe('mongoose-allocate', function () {
     // Applying plugin
     schema.plugin(mongooseAllocate);
 
-    Model = mongoose.model('M', schema);
+    var Model = mongoose.model('M', schema);
 
     Model.create({
       title1: 'T'
@@ -118,13 +116,13 @@ describe('mongoose-allocate', function () {
   });
 
   it ('should get settings with both static and instance "getPaddingSettings" method', function (done) {
-    schema = new Schema({
+    var schema = new Schema({
       title1: String
     }, { capped: { size: 1000, max: 5, autoIndexId: true } });
     
     // Applying plugin
     schema.plugin(mongooseAllocate);
-    Model = mongoose.model('M4', schema);
+    var Model = mongoose.model('M4', schema);
 
     Model.create({
       title1: 'T'
