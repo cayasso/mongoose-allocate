@@ -83,5 +83,5 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [mongoose]: http://mongoosejs.com
-[Mocha]: http://visionmedia.github.com/mocha/
+[Mocha]: http://mochajs.org/
 [repository]: http://github.com/cayasso/mongoose-allocate
